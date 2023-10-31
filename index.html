@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expedientes Médicos</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Expedientes Médicos</h1>
+
+    <div id="loginForm" style="display: block;">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="loginEmail" placeholder="Correo">
+        <input type="password" id="loginPassword" placeholder="Contraseña">
+        <button onclick="login()">Iniciar Sesión</button>
+    </div>
+
+    <div id="createForm" style="display: none;">
+        <h2>Crear Paciente</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="number" id="edad" placeholder="Edad">
+        <input type="text" id="diagnostico" placeholder="Diagnóstico">
+        <input type="text" id="medicos" placeholder="Médicos (separados por comas)">
+        <input type="date" id="fechaUltimaCita" placeholder="Fecha de última cita">
+        <input type="text" id="direccion" placeholder="Dirección">
+        <input type="text" id="numeroTelefono" placeholder="Número de Teléfono">
+        <input type="text" id="correo" placeholder="Correo">
+        <button onclick="createPaciente()">Crear Paciente</button>
+    </div>
+
+    <div id="updateForm" style="display: none;">
+        <h2>Actualizar Paciente</h2>
+        <input type="text" id="updateNombre" placeholder="Nombre">
+        <input type="number" id="updateEdad" placeholder="Edad">
+        <input type="text" id="updateDiagnostico" placeholder="Diagnóstico">
+        <input type="text" id="updateMedicos" placeholder="Médicos (separados por comas)">
+        <input type="date" id="updateFechaUltimaCita" placeholder="Fecha de última cita">
+        <input type="text" id="updateDireccion" placeholder="Dirección">
+        <input type="text" id="updateNumeroTelefono" placeholder="Número de Teléfono">
+        <input type="text" id="updateCorreo" placeholder="Correo">
+        <button id="updateButton" onclick="updatePaciente()">Actualizar Paciente</button>
+    </div>
+
+    <div id="patientList" style="display: none;">
+        <h2>Lista de Pacientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Diagnóstico</th>
+                    <th>Médicos</th>
+                    <th>Fecha Última Cita</th>
+                    <th>Dirección</th>
+                    <th>Número de Teléfono</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="patientTable"></tbody>
+        </table>
+    </div>
+
+    <button onclick="logout()">Cerrar Sesión</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
